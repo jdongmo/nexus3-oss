@@ -201,7 +201,7 @@
     dest: "{{ nexus_default_settings_file }}"
     regexp: "^application-host=.*"
     line: "application-host=127.0.0.1"
-  when: httpd_setup_enable
+  when: nexus_need_proxy
 
 - name: Create systemd service configuration
   template:

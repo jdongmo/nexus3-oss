@@ -23,7 +23,7 @@ def updateUser(parsed_args) {
     user.setEmailAddress(parsed_args.email)
     security.securitySystem.updateUser(user)
     security.setUserRoles(parsed_args.username, parsed_args.roles)
-    security.securitySystem.changePassword(parsed_args.username, parsed_args.password)
+    //security.securitySystem.changePassword(parsed_args.username, parsed_args.password)
 }
 
 def addUser(parsed_args) {

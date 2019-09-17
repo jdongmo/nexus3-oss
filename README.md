@@ -154,7 +154,9 @@ Header and footer branding, those can contain HTML.
     httpd_ssl_certificate_key_file: 'files/nexus.vm.key'
 ```
 
-Setup an [SSL Reverse-proxy](https://help.sonatype.com/display/NXRM3/Run+Behind+a+Reverse+Proxy#RunBehindaReverseProxy-Example:ReverseProxySSLTerminationatBasePath), this needs httpd installed. Note : when `httpd_setup_enable` is set to `true`, nexus binds to 127.0.0.1:8081 thus *not* being directly accessible on HTTP port 8081 from an external IP.
+Setup an [SSL
+Reverse-proxy](https://help.sonatype.com/display/NXRM3/Run+Behind+a+Reverse+Proxy#RunBehindaReverseProxy-Example:ReverseProxySSLTerminationatBasePath),
+this needs web server installed. Note : when `nexus_need_proxy` is set to `true`, nexus binds to 127.0.0.1:8081 thus *not* being directly accessible on HTTP port 8081 from an external IP.
 
 ```yaml
     httpd_copy_ssl_files: true  # Default is false
